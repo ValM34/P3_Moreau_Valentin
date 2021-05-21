@@ -1,11 +1,9 @@
-/* Variables */
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $footer-color: #353535;
-/* Fin variables */
-
-/* Général */
+$shadow: rgba(63,63,63,0.64);
+$box-shadow: 0px 7px 10px -6px $shadow;
 * {
     font-family: 'Roboto', 'Arial', 'sans-serif';
 }
@@ -17,9 +15,27 @@ body {
 a {
     text-decoration: none;
 }
-/* Fin général */
+@mixin header {
+    padding: 1.4em 0 0.4em 0;
+    text-align: center;
+    &__icon-link {
+        position: absolute;
+        left: 1.5em;
+        top: 1.6em;
+        &__element {
+            color: black;
+            font-size: 1.3em;
+        }
+    }
+    &__logo-link__img {
+        width: 10em;
+    }
+}
 
-/* Mixins */
+.header {
+@include header;
+}
+
 @mixin footer {
     background-color: $footer-color;
     width: 100%;
@@ -27,7 +43,7 @@ a {
     flex-direction: column;
     padding: 1.5em 0 1.5em 1em;   
         &__img {
-            width: 28%;
+            width: 6em;
             filter: invert(100%);
         }
         &__container {
@@ -40,7 +56,10 @@ a {
             }
     }
 }
+
 .footer {
 @include footer;
 }
-/* Fin Mixins */
+.dfdsfd {
+    margin: 1em;
+}

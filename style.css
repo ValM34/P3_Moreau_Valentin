@@ -1,7 +1,3 @@
-@charset "UTF-8";
-/* Variables */
-/* Fin variables */
-/* Général */
 * {
   font-family: "Roboto", "Arial", "sans-serif";
 }
@@ -14,8 +10,23 @@ a {
   text-decoration: none;
 }
 
-/* Fin général */
-/* Mixins */
+.header {
+  padding: 1.4em 0 0.4em 0;
+  text-align: center;
+}
+.header__icon-link {
+  position: absolute;
+  left: 1.5em;
+  top: 1.6em;
+}
+.header__icon-link__element {
+  color: black;
+  font-size: 1.3em;
+}
+.header__logo-link__img {
+  width: 10em;
+}
+
 .footer {
   background-color: #353535;
   width: 100%;
@@ -24,7 +35,7 @@ a {
   padding: 1.5em 0 1.5em 1em;
 }
 .footer__img {
-  width: 28%;
+  width: 6em;
   filter: invert(100%);
 }
 .footer__container {
@@ -37,6 +48,8 @@ a {
   font-size: 70%;
 }
 
-/* Fin Mixins */
+.dfdsfd {
+  margin: 1em;
+}
 
 /*# sourceMappingURL=style.css.map */
