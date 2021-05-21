@@ -1,9 +1,42 @@
+@charset "UTF-8";
+/* Variables */
+/* Fin variables */
+/* Général */
 * {
-  background: black;
+  font-family: "Roboto", "Arial", "sans-serif";
 }
 
 body {
-  background: pink;
+  margin: 0em;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* Fin général */
+/* Mixins */
+.footer {
+  background-color: #353535;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 0 1.5em 1em;
+}
+.footer__img {
+  width: 28%;
+  filter: invert(100%);
+}
+.footer__container {
+  margin: 0.4em 0 0 0;
+}
+.footer__container__a {
+  color: white;
+}
+.footer__container .fa-hands-helping {
+  font-size: 70%;
+}
+
+/* Fin Mixins */
 
 /*# sourceMappingURL=style.css.map */
