@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", "Arial", "sans-serif";
 }
@@ -48,8 +49,48 @@ a {
   font-size: 70%;
 }
 
-.dfdsfd {
-  margin: 1em;
+/* Rajouter à l'include ".btn-link__text::after { content: "";} */
+.btn-link {
+  text-align: center;
 }
+.btn-link__text {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 2em;
+  border: none;
+  font-size: 1em;
+  padding: 0.94em 1.3em 0.94em 1.3em;
+  margin: 1em 0 1em 0;
+  display: inline-block;
+  box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
+  position: relative;
+}
+.btn-link__text:hover {
+  cursor: pointer;
+}
+.btn-link__text:hover::after {
+  opacity: 1;
+}
+.btn-link__text::after {
+  opacity: 0;
+  transition: opacity 400ms;
+  background: linear-gradient(#ff46cc, #782cd3);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 2em;
+  font-size: 1em;
+  padding: 0.94em 1.3em 0.94em 1.3em;
+}
+.btn-link__text::after {
+  content: "Explorer nos restaurants";
+}
+
+/*
+opacity: 0;
+transition: opacity 400ms;
+background: linear-gradient(darken($color-secondary, 10), darken($color-primary, 50)); */
 
 /*# sourceMappingURL=style.css.map */

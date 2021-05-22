@@ -60,6 +60,49 @@ a {
 .footer {
 @include footer;
 }
-.dfdsfd {
-    margin: 1em;
+
+@mixin bouton-degrade {
+    text-align: center;
+    &__text {
+        color: white;
+        background: linear-gradient($color-secondary, $color-primary); 
+        border-radius: 2em;
+        border: none;
+        font-size: 1em;
+        padding: 0.94em 1.3em 0.94em 1.3em;
+        margin: 1em 0 1em 0;
+        display: inline-block;
+        box-shadow: $box-shadow;
+        position: relative;
+        &:hover {
+            cursor: pointer;
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            opacity: 0;
+            transition: opacity 400ms;
+            background: linear-gradient(darken($color-secondary, 10), darken($color-primary, 10));
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 2em;
+            font-size: 1em;
+            padding: 0.94em 1.3em 0.94em 1.3em;
+        }
+    }
 }
+/* Rajouter à l'include ".btn-link__text::after { content: "";} */
+.btn-link {
+    @include bouton-degrade;
+    &__text::after { 
+        content: "Explorer nos restaurants";
+    }
+}
+/*
+opacity: 0;
+transition: opacity 400ms;
+background: linear-gradient(darken($color-secondary, 10), darken($color-primary, 50)); */
