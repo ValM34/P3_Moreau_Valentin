@@ -126,7 +126,7 @@ a {
 @mixin header {
     padding: 1.4em 0 0.4em 0;
     text-align: center;
-    box-shadow: $box-shadow;
+    box-shadow: 0px 4px 10px -6px lighten($shadow, 10);
     &__icon-link {
         position: absolute;
         left: 1.5em;
@@ -203,6 +203,19 @@ a {
         }
     }
 }
+.localisation {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    color: #353535;
+    padding: 1em 0 1em 0;
+    z-index: -1;
+    position: relative;
+    font-weight: bold;
+}
+.fa-map-marker-alt {
+    margin-right: 1em;
+}
 /* Rajouter à l'include ".btn-link__text::after { content: "";} */
 .btn-link {
     @include bouton-degrade;
@@ -240,7 +253,7 @@ a {
             left: 0;
             right: 0;
             font-size: 1.5em;
-            color: grey;
+            color: #7e7e7e;
             right: 0.5em;
             top: 0.7em;
         }
