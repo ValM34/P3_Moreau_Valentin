@@ -153,18 +153,36 @@ a {
   color: black;
 }
 .container-vignette__text__icon1 {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   font-size: 1.5em;
   color: grey;
-  position: relative;
   right: 0.5em;
   top: 0.7em;
 }
+.container-vignette__text__icon1:hover {
+  color: transparent;
+}
 .container-vignette__text__icon2 {
-  font-size: 1.5em;
-  color: grey;
   position: relative;
+  top: 0;
+  bottom: 0;
+  left: -28px;
+  right: 0;
+  font-size: 1.5em;
   right: 0.5em;
   top: 0.7em;
+  transition: opacity 400ms;
+  opacity: 0;
+  color: transparent;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+}
+.container-vignette__text__icon2:hover {
+  opacity: 1;
 }
 
 .vignette-center {
