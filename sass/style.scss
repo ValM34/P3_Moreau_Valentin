@@ -10,6 +10,8 @@ $box-shadow: 0px 7px 10px -6px $shadow;
 
 body {
     margin: 0em;
+    display: flex;
+    flex-direction: column;
 }
 h4 {
     color: black;
@@ -118,6 +120,19 @@ a {
     100% {
         transform: rotate(1800deg);
     }
+}
+.titre-accueil {
+    background-color: #f6f6f6;
+}
+.h1-accueil {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em 2em 0em 2em;
+}
+.p-titre {
+    text-align: center;
+    color: #353535;
+    padding: 0 0.5em 0 0.5em;
 }
 .h2-accueil {
     margin-left: 2em;
@@ -335,13 +350,13 @@ a {
 
 @mixin fonctionnement {
     display: flex;
-    padding: 2.2em 1.4em 2.2em 2em;;
+    padding: 2.2em 1.4em 2.2em 2em;
     background-color: #f0eeee;
     width: 220px;
     border-radius: 1em;
     box-shadow: 0 7px 10px -6px lighten($shadow, 35);
     position: relative;
-    margin: 1em;
+    margin: 1em 1em 1em 2.1em;
     color: #7e7e7e;
     &::before {
     transition: opacity 400ms ease-in-out;

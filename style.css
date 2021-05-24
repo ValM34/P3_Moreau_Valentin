@@ -5,6 +5,8 @@
 
 body {
   margin: 0em;
+  display: flex;
+  flex-direction: column;
 }
 
 h4 {
@@ -119,6 +121,22 @@ a {
     transform: rotate(1800deg);
   }
 }
+.titre-accueil {
+  background-color: #f6f6f6;
+}
+
+.h1-accueil {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em 2em 0em 2em;
+}
+
+.p-titre {
+  text-align: center;
+  color: #353535;
+  padding: 0 0.5em 0 0.5em;
+}
+
 .h2-accueil {
   margin-left: 2em;
 }
@@ -336,7 +354,7 @@ a {
   border-radius: 1em;
   box-shadow: 0 7px 10px -6px rgba(152, 152, 152, 0.64);
   position: relative;
-  margin: 1em;
+  margin: 1em 1em 1em 2.1em;
   color: #7e7e7e;
 }
 .fonctionnement__tuto::before {
