@@ -7,13 +7,22 @@ body {
   margin: 0em;
 }
 
+h4 {
+  color: black;
+}
+
 a {
   text-decoration: none;
+}
+
+.h2-accueil {
+  margin-left: 2em;
 }
 
 .header {
   padding: 1.4em 0 0.4em 0;
   text-align: center;
+  box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
 }
 .header__icon-link {
   position: absolute;
@@ -73,7 +82,7 @@ a {
 }
 .btn-link__text::after {
   opacity: 0;
-  transition: opacity 400ms;
+  transition: opacity 400ms ease-in-out;
   background: linear-gradient(#ff46cc, #782cd3);
   position: absolute;
   left: 0;
@@ -89,6 +98,10 @@ a {
 }
 
 /* revoir la width pour l'adapter mobile/desktop si il faut et faire l'animation */
+.section-restaurants {
+  background-color: #f6f6f6;
+}
+
 .image-1 {
   background-size: cover;
   width: 20em;
@@ -135,6 +148,7 @@ a {
   box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
   margin: 1em;
   display: inline-block;
+  background-color: white;
 }
 .container-vignette__background__image {
   display: none;
@@ -175,7 +189,7 @@ a {
   font-size: 1.5em;
   right: 0.5em;
   top: 0.7em;
-  transition: opacity 400ms;
+  transition: opacity 400ms ease-in-out;
   opacity: 0;
   color: transparent;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -188,6 +202,65 @@ a {
 .vignette-center {
   display: flex;
   justify-content: center;
+}
+
+.fonctionnement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fonctionnement__tuto {
+  display: flex;
+  padding: 2.2em 1.4em 2.2em 2em;
+  background-color: #f0eeee;
+  width: 220px;
+  border-radius: 1em;
+  box-shadow: 0 7px 10px -6px rgba(152, 152, 152, 0.64);
+  position: relative;
+  margin: 1em;
+  color: #7e7e7e;
+}
+.fonctionnement__tuto::before {
+  transition: opacity 400ms ease-in-out;
+  background-color: #e4d5f6;
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 1em;
+}
+.fonctionnement__tuto:hover {
+  color: #9356DC;
+}
+.fonctionnement__tuto:hover::before {
+  opacity: 1;
+}
+.fonctionnement__tuto__number {
+  left: -0.7em;
+  top: 1.35em;
+  position: absolute;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin-right: 1em;
+  background-color: #9356DC;
+  border-radius: 2em;
+  color: white;
+}
+.fonctionnement__tuto__icon {
+  font-size: 1.2em;
+  top: 1.15em;
+  padding: 0 1em 0 0;
+  left: 1.7em;
+  position: absolute;
+}
+.fonctionnement__tuto__text {
+  font-weight: bold;
+  position: absolute;
+  left: 4em;
+  top: 0.3em;
 }
 
 /*# sourceMappingURL=style.css.map */
