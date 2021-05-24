@@ -49,7 +49,7 @@ a {
   }
 }
 .loading-spinner-visibility {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   animation: loading-spinner-background 2700ms forwards;
@@ -143,7 +143,6 @@ a {
 
 .footer {
   background-color: #353535;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1.5em 0 1.5em 1em;
@@ -153,7 +152,7 @@ a {
   filter: invert(100%);
 }
 .footer__container {
-  margin: 0.4em 0 0 0;
+  padding: 0.4em 0 0 0;
 }
 .footer__container__a {
   color: white;
