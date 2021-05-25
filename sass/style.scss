@@ -403,3 +403,96 @@ a {
 .fonctionnement__tuto {
     @include fonctionnement;
 }
+
+.body-menu {
+    background-color: transparent;
+}
+
+.background-1 {
+    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    height: 20em;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    position: relative;
+}
+.section-menu {
+    background-color: #f6f6f6;
+}
+.menu-titre {
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    margin-top: -2em;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-around;
+    &__h1 {
+        font-style: inherit;
+        font-family: 'Shrikhand', 'Arial', 'sans-serif';
+    }
+}
+.heart-menu1 {
+    position: relative;
+    top: 0.8em;
+    font-size: 1.8em;
+}
+.heart-menu2 {
+    position: relative;
+    top: 0.8em;
+    left: -1.14em;
+    font-size: 1.8em;
+}
+#commander::after { 
+        content: "Commander";
+}
+
+.btn-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 1em;
+    box-shadow: $box-shadow;
+    background-color: white;
+    overflow: hidden;
+    &:hover > &__right {
+        transform: translateX(-5em);
+    }
+    &__right {
+        text-align: right;
+        display: flex;
+        align-items: flex-end;
+        transition: transform 400ms ease-in-out;
+        transform: translateX(0em);
+    }
+    &:hover > &__animate {
+        transform: translateX(-5em) rotate(0deg);
+    }
+    &__left__text {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 0;
+    }
+    :hover &__animate__check {
+        transform: rotate(360deg);
+    }
+}
+.btn-menu__animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    width: 30%;
+    background-color: blue;
+    transition: transform 400ms ease-in;
+    transform: translateX(0em);
+    &__check {
+        position: relative;
+        top: 50%;
+        right: 0%;
+        transition: transform 400ms ease-in-out;
+        transform: rotate(0deg);
+    }
+}
