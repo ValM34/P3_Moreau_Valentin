@@ -13,6 +13,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+.h2-menu {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0 0 0.2em 1em;
+}
 h4 {
     color: black;
 }
@@ -409,7 +415,7 @@ a {
 }
 
 .background-1 {
-    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     height: 20em;
     background-size: cover;
     background-position: center center;
@@ -446,53 +452,79 @@ a {
         content: "Commander";
 }
 
+
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
 .btn-menu {
-    position: relative;
+    background-color: white;
+    border-radius: 1em;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
-    border-radius: 1em;
-    margin: 1em;
+    width: 350px;
     box-shadow: $box-shadow;
-    background-color: white;
     overflow: hidden;
-    &:hover > &__right {
-        transform: translateX(-5em);
+    &:hover {
+        cursor: pointer;
     }
-    &__right {
-        text-align: right;
+    &__animate {
+        position: relative;
+        transition: transform 800ms ease-in-out;
+        transform: translateX(4.4em);
+        width: 20%;
+        background-color: $color-tertiary;
         display: flex;
-        align-items: flex-end;
-        transition: transform 400ms ease-in-out;
-        transform: translateX(0em);
+        align-items: center;
+        justify-content: center;
     }
     &:hover > &__animate {
-        transform: translateX(-5em) rotate(0deg);
+        transform: translateX(0);
+    }
+    &__left__title {
+        display: block;
+        padding: 1em 0 0 1em;
     }
     &__left__text {
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 0;
-    }
-    :hover &__animate__check {
-        transform: rotate(360deg);
+        margin: 0;
+        padding: 0.5em 0 1em 1em;
     }
 }
-.btn-menu__animate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 100%;
-    width: 30%;
-    background-color: blue;
-    transition: transform 400ms ease-in;
-    transform: translateX(0em);
-    &__check {
-        position: relative;
-        top: 50%;
-        right: 0%;
-        transition: transform 400ms ease-in-out;
-        transform: rotate(0deg);
+.icon__animate {
+    width: 350px;
+    &:hover &__rotate {
+        transform: rotate(360deg);
     }
+    &__rotate {
+        transition: 800ms 200ms ease-in-out;
+        transform: rotate(0);
+        color: white;
+        font-size: 1.3em;
+    }
+}
+.price__animate {
+    width: 350px;
+    &:hover .btn-menu__right {
+        transform: translateX(1em);
+    }
+}
+.btn-menu__right {
+    transition: transform 800ms ease-in-out;
+    transform: translateX(5em);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+.line {
+    background-color: $color-tertiary;
+    width: 41px;
+    height: 3px;
+    margin: 0 0 1em 1em;
+}
+.container-menu {
+    margin-bottom: 3em;
 }
