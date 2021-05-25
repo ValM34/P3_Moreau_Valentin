@@ -474,7 +474,7 @@ a {
 .btn-menu__animate {
   position: relative;
   transition: transform 800ms ease-in-out;
-  transform: translateX(4.4em);
+  transform: translateX(4.5em);
   width: 20%;
   background-color: #99E2D0;
   display: flex;
@@ -482,7 +482,7 @@ a {
   justify-content: center;
 }
 .btn-menu:hover > .btn-menu__animate {
-  transform: translateX(0);
+  transform: translateX(0.2em);
 }
 .btn-menu__left__title {
   display: block;
@@ -531,6 +531,48 @@ a {
 
 .container-menu {
   margin-bottom: 3em;
+  animation: entrees 800ms ease-in-out forwards;
+}
+
+@keyframes entrees {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container-menu-2 {
+  margin-bottom: 3em;
+  animation: entrees 1600ms ease-in-out forwards;
+}
+
+@keyframes entrees {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container-menu-3 {
+  margin-bottom: 3em;
+  animation: entrees 2400ms ease-in-out forwards;
+}
+
+@keyframes entrees {
+  0% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
