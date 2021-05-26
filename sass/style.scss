@@ -294,8 +294,8 @@ a {
             transition: opacity 400ms ease-in-out;
             opacity: 0;
             color: transparent;
-            background: -webkit-linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
+            background: linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
         }
         &__icon2:hover {
             opacity: 1;
