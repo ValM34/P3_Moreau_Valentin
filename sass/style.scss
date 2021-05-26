@@ -4,6 +4,23 @@ $color-tertiary: #99E2D0;
 $footer-color: #353535;
 $shadow: rgba(63,63,63,0.64);
 $box-shadow: 0px 7px 10px -6px $shadow;
+
+@mixin desktop {
+    @media screen and (min-width: 1025px) {
+        @content;
+    }
+}
+@mixin tablette {
+    @media screen and (max-width: 1024px) and (min-width: 601px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
 * {
     font-family: 'Roboto', 'Arial', 'sans-serif';
 }
@@ -129,11 +146,20 @@ a {
 }
 .titre-accueil {
     background-color: #f6f6f6;
+    padding-bottom: 2em;
 }
 .h1-accueil {
     text-align: center;
-    font-size: 1.5em;
     padding: 1em 2em 0em 2em;
+    @include desktop {
+        font-size: 2em;
+    }
+    @include tablette {
+        font-size: 1.5em;
+    }
+    @include mobile {
+        font-size: 1.5em;
+    }
 }
 .p-titre {
     text-align: center;
@@ -141,7 +167,16 @@ a {
     padding: 0 0.5em 0 0.5em;
 }
 .h2-accueil {
-    margin-left: 2em;
+    @include desktop {
+        font-size: 2em;
+        text-align: center;
+    }
+    @include tablette {
+        text-align: center;
+    }
+    @include mobile {
+        margin-left: 16px;
+    }
 }
 
 @mixin header {
@@ -251,8 +286,27 @@ a {
     justify-content: center;
     box-shadow: $box-shadow;
     margin: 1em;
-    display: inline-block;
     background-color: white;
+    width: 100%;
+
+    &__background {
+        background-size: cover;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        background-position: center center;
+        @include mobile {
+            width: 100%;
+            height: 10em;
+        }
+        @include tablette {
+            width: 100%;
+            height: 10em;
+        }
+        @include desktop {
+            width: 100%;
+            height: 15em;
+        }
+    }
     &__background__image {
         display: none;
     }
@@ -305,40 +359,26 @@ a {
 .section-restaurants {
     background-color: #f6f6f6;
 }
+.container-restaurants {
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
+    @include tablette {
+        display: flex;
+        justify-content: center;
+    }
+}
 .image-1 {
-    background-size: cover;
-    width: 20em;
-    height: 10em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    background-position: center center;
     background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 .image-2 {
-    background-size: cover;
-    width: 20em;
-    height: 10em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    background-position: center center;
     background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 .image-3 {
-    background-size: cover;
-    width: 20em;
-    height: 10em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    background-position: center center;
     background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 .image-4 {
-    background-size: cover;
-    width: 20em;
-    height: 10em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    background-position: center center;
     background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 .container-vignette {
@@ -347,24 +387,41 @@ a {
 .vignette-center {
     display: flex;
     justify-content: center;
+    @include desktop {
+        width: 30%;
+    }
+    @include tablette {
+        width: 45%;
+    }
 }
 
 .fonctionnement {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include desktop {
+        justify-content: center;
+    }
+    @include mobile {
+        align-items: center;
+        flex-direction: column;
+    }
+    @include tablette {
+        align-items: center;
+        flex-direction: column;
+    }
 }
-
+.section-fonctionnement {
+    padding-bottom: 3em;
+}
 @mixin fonctionnement {
     display: flex;
     padding: 2.2em 1.4em 2.2em 2em;
     background-color: #f0eeee;
-    width: 220px;
+    width: 250px;
     border-radius: 1em;
     box-shadow: 0 7px 10px -6px lighten($shadow, 35);
     position: relative;
-    margin: 1em 1em 1em 2.1em;
     color: #7e7e7e;
+    margin: 1em;
     &::before {
     transition: opacity 400ms ease-in-out;
     background-color: lighten($color-primary, 30);

@@ -130,12 +130,27 @@ a {
 }
 .titre-accueil {
   background-color: #f6f6f6;
+  padding-bottom: 2em;
 }
 
 .h1-accueil {
   text-align: center;
-  font-size: 1.5em;
   padding: 1em 2em 0em 2em;
+}
+@media screen and (min-width: 1025px) {
+  .h1-accueil {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .h1-accueil {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .h1-accueil {
+    font-size: 1.5em;
+  }
 }
 
 .p-titre {
@@ -144,8 +159,21 @@ a {
   padding: 0 0.5em 0 0.5em;
 }
 
-.h2-accueil {
-  margin-left: 2em;
+@media screen and (min-width: 1025px) {
+  .h2-accueil {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .h2-accueil {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .h2-accueil {
+    margin-left: 16px;
+  }
 }
 
 .header {
@@ -246,43 +274,32 @@ a {
   background-color: #f6f6f6;
 }
 
+@media screen and (min-width: 1025px) {
+  .container-restaurants {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .container-restaurants {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .image-1 {
-  background-size: cover;
-  width: 20em;
-  height: 10em;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  background-position: center center;
   background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 
 .image-2 {
-  background-size: cover;
-  width: 20em;
-  height: 10em;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  background-position: center center;
   background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 
 .image-3 {
-  background-size: cover;
-  width: 20em;
-  height: 10em;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  background-position: center center;
   background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 
 .image-4 {
-  background-size: cover;
-  width: 20em;
-  height: 10em;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  background-position: center center;
   background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
@@ -291,8 +308,32 @@ a {
   justify-content: center;
   box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
   margin: 1em;
-  display: inline-block;
   background-color: white;
+  width: 100%;
+}
+.container-vignette__background {
+  background-size: cover;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  background-position: center center;
+}
+@media screen and (max-width: 600px) {
+  .container-vignette__background {
+    width: 100%;
+    height: 10em;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .container-vignette__background {
+    width: 100%;
+    height: 10em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container-vignette__background {
+    width: 100%;
+    height: 15em;
+  }
 }
 .container-vignette__background__image {
   display: none;
@@ -347,23 +388,52 @@ a {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 1025px) {
+  .vignette-center {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .vignette-center {
+    width: 45%;
+  }
+}
 
 .fonctionnement {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .fonctionnement {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .fonctionnement {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.section-fonctionnement {
+  padding-bottom: 3em;
 }
 
 .fonctionnement__tuto {
   display: flex;
   padding: 2.2em 1.4em 2.2em 2em;
   background-color: #f0eeee;
-  width: 220px;
+  width: 250px;
   border-radius: 1em;
   box-shadow: 0 7px 10px -6px rgba(152, 152, 152, 0.64);
   position: relative;
-  margin: 1em 1em 1em 2.1em;
   color: #7e7e7e;
+  margin: 1em;
 }
 .fonctionnement__tuto::before {
   transition: opacity 400ms ease-in-out;
