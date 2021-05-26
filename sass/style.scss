@@ -33,8 +33,18 @@ body {
 .h2-menu {
     text-transform: uppercase;
     font-weight: normal;
+    @include desktop {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    @include tablette {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    @include mobile {
     font-size: 1em;
     margin: 0 0 0.2em 1em;
+    }
 }
 h4 {
     color: black;
@@ -416,12 +426,21 @@ a {
     display: flex;
     padding: 2.2em 1.4em 2.2em 2em;
     background-color: #f0eeee;
-    width: 250px;
     border-radius: 1em;
     box-shadow: 0 7px 10px -6px lighten($shadow, 35);
     position: relative;
     color: #7e7e7e;
     margin: 1em;
+    @include mobile {
+        max-width: 70%;
+        width: 250px;
+    }
+    @include tablette {
+        width: 250px;
+    }
+    @include desktop {
+        width: 250px;
+    }
     &::before {
     transition: opacity 400ms ease-in-out;
     background-color: lighten($color-primary, 30);
@@ -474,14 +493,36 @@ a {
 
 .background-1 {
     background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    height: 20em;
     background-size: cover;
     background-position: center center;
     z-index: -1;
     position: relative;
+    @include desktop {
+        height: 105em;
+    }
+    @include tablette {
+        height: 105em;
+    }
+    @include mobile {
+        height: 20em;
+    }
 }
 .section-menu {
     background-color: #f6f6f6;
+    @include desktop {
+        width: 40em;
+        margin: -90em auto 2em auto;
+        padding-bottom: 2em;
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+    }
+    @include tablette {
+        width: 30em;
+        margin: -90em auto 2em auto;
+        padding-bottom: 2em;
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+    }
 }
 .menu-titre {
     border-top-left-radius: 2em;
@@ -493,6 +534,12 @@ a {
     &__h1 {
         font-style: inherit;
         font-family: 'Shrikhand', 'Arial', 'sans-serif';
+        @include desktop {
+            font-size: 2em;
+        }
+        @include tablette {
+            font-size: 1.7em;
+        }
     }
 }
 .heart-menu1 {
@@ -522,7 +569,7 @@ a {
     border-radius: 1em;
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 100%;
     box-shadow: $box-shadow;
     overflow: hidden;
     &:hover {
@@ -531,7 +578,7 @@ a {
     &__animate {
         position: relative;
         transition: transform 800ms ease-in-out;
-        transform: translateX(4.5em);
+        transform: translateX(4.3em);
         width: 20%;
         background-color: $color-tertiary;
         display: flex;
@@ -551,7 +598,7 @@ a {
     }
 }
 .icon__animate {
-    width: 350px;
+    width: 100%;
     &:hover &__rotate {
         transform: rotate(360deg);
     }
@@ -563,14 +610,14 @@ a {
     }
 }
 .price__animate {
-    width: 350px;
+    width: 300px;
     &:hover .btn-menu__right {
-        transform: translateX(1em);
+        transform: translateX(0em);
     }
 }
 .btn-menu__right {
     transition: transform 800ms ease-in-out;
-    transform: translateX(5em);
+    transform: translateX(3.5em);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1em;
@@ -579,9 +626,21 @@ a {
 
 .line {
     background-color: $color-tertiary;
-    width: 41px;
     height: 3px;
+    @include desktop {
+        width: 20%;
+        display: block;
+        margin: auto auto 1em auto;
+    }
+    @include tablette {
+        width: 20%;
+        display: block;
+        margin: auto auto 1em auto;
+    }
+    @include mobile {
+    width: 41px;
     margin: 0 0 1em 1em;
+    }
 }
 .container-menu {
     margin-bottom: 3em;
