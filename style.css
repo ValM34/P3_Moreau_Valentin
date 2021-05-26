@@ -25,25 +25,12 @@ a {
 }
 
 .body-accueil {
-  -webkit-animation: loading-spinner 3000ms ease-in-out forwards;
-          animation: loading-spinner 3000ms ease-in-out forwards;
+  animation: loading-spinner 3000ms ease-in-out forwards;
   background-color: white;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 500;
-}
-
-@-webkit-keyframes loading-spinner {
-  0% {
-    opacity: 0.85;
-  }
-  90% {
-    opacity: 0.85;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes loading-spinner {
@@ -55,19 +42,6 @@ a {
   }
   100% {
     opacity: 0;
-  }
-}
-@-webkit-keyframes loading-spinner-background {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 @keyframes loading-spinner-background {
@@ -87,8 +61,7 @@ a {
   position: fixed;
   height: 100%;
   width: 100%;
-  -webkit-animation: loading-spinner-background 2700ms forwards;
-          animation: loading-spinner-background 2700ms forwards;
+  animation: loading-spinner-background 2700ms forwards;
   background-color: white;
   z-index: 10000;
 }
@@ -105,8 +78,7 @@ a {
   width: 10em;
   position: absolute;
   z-index: 1000;
-  -webkit-animation: spinner-1 3000ms cubic-bezier(0, 0, 1, 1) forwards;
-          animation: spinner-1 3000ms cubic-bezier(0, 0, 1, 1) forwards;
+  animation: spinner-1 3000ms cubic-bezier(0, 0, 1, 1) forwards;
   top: 19em;
 }
 .loading-spinner-2 {
@@ -117,8 +89,7 @@ a {
   width: 15em;
   position: absolute;
   z-index: 1000;
-  -webkit-animation: spinner-2 3000ms cubic-bezier(0, 0, 1, 1) forwards;
-          animation: spinner-2 3000ms cubic-bezier(0, 0, 1, 1) forwards;
+  animation: spinner-2 3000ms cubic-bezier(0, 0, 1, 1) forwards;
   top: 16.5em;
 }
 .loading-spinner-3 {
@@ -129,18 +100,8 @@ a {
   width: 20em;
   position: absolute;
   z-index: 1000;
-  -webkit-animation: spinner-3 3000ms cubic-bezier(0, 0, 1, 1) forwards;
-          animation: spinner-3 3000ms cubic-bezier(0, 0, 1, 1) forwards;
+  animation: spinner-3 3000ms cubic-bezier(0, 0, 1, 1) forwards;
   top: 14em;
-}
-
-@-webkit-keyframes spinner-1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(720deg);
-  }
 }
 
 @keyframes spinner-1 {
@@ -151,28 +112,12 @@ a {
     transform: rotate(720deg);
   }
 }
-@-webkit-keyframes spinner-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1200deg);
-  }
-}
 @keyframes spinner-2 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(1200deg);
-  }
-}
-@-webkit-keyframes spinner-3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1800deg);
   }
 }
 @keyframes spinner-3 {
@@ -257,8 +202,7 @@ a {
 }
 .footer__img {
   width: 6em;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
 }
 .footer__container {
   padding: 0.4em 0 0 0;
@@ -434,8 +378,7 @@ a {
   opacity: 0;
   color: transparent;
   background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 .container-vignette__text__icon2:hover {
   opacity: 1;
@@ -659,31 +602,17 @@ a {
 
 .container-menu {
   margin-bottom: 3em;
-  -webkit-animation: entrees 800ms ease-in-out both;
-          animation: entrees 800ms ease-in-out both;
+  animation: entrees 800ms ease-in-out both;
 }
 
 .container-menu-2 {
   margin-bottom: 3em;
-  -webkit-animation: entrees 800ms 800ms ease-in-out both;
-          animation: entrees 800ms 800ms ease-in-out both;
+  animation: entrees 800ms 800ms ease-in-out both;
 }
 
 .container-menu-3 {
   margin-bottom: 3em;
-  -webkit-animation: entrees 800ms 1600ms ease-in-out both;
-          animation: entrees 800ms 1600ms ease-in-out both;
-}
-
-@-webkit-keyframes entrees {
-  0% {
-    opacity: 0;
-    transform: translateY(5em);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0em);
-  }
+  animation: entrees 800ms 1600ms ease-in-out both;
 }
 
 @keyframes entrees {
@@ -696,3 +625,5 @@ a {
     transform: translateY(0em);
   }
 }
+
+/*# sourceMappingURL=style.css.map */
