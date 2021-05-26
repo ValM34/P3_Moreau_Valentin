@@ -1,0 +1,21 @@
+@mixin header {
+    padding: 1.4em 0 0.4em 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px -6px lighten($shadow, 10);
+    &__icon-link {
+        position: absolute;
+        left: 1.5em;
+        top: 1.6em;
+        &__element {
+            color: black;
+            font-size: 1.3em;
+        }
+    }
+    &__logo-link__img {
+        width: 10em;
+    }
+}
+
+.header {
+@include header;
+}

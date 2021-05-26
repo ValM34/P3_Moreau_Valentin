@@ -1,0 +1,18 @@
+
+
+.background-1 {
+    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    position: relative;
+    @include desktop {
+        height: 105em;
+    }
+    @include tablette {
+        height: 105em;
+    }
+    @include mobile {
+        height: 20em;
+    }
+}

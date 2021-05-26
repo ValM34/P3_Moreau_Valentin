@@ -1,0 +1,130 @@
+.fonctionnement__tuto {
+    display: flex;
+    padding: 2.2em 1.4em 2.2em 2em;
+    background-color: #f0eeee;
+    border-radius: 1em;
+    box-shadow: 0 7px 10px -6px lighten($shadow, 35);
+    position: relative;
+    color: #7e7e7e;
+    margin: 1em;
+    @include mobile {
+        max-width: 70%;
+        width: 250px;
+    }
+    @include tablette {
+        width: 250px;
+    }
+    @include desktop {
+        width: 250px;
+    }
+    &::before {
+    transition: opacity 400ms ease-in-out;
+    background-color: lighten($color-primary, 30);
+    opacity: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 1em;
+    }
+    &:hover {
+        color: $color-primary;
+        &::before {
+            opacity: 1;
+        }
+    }
+    &__number {
+        left: -0.7em;
+        top: 1.35em;
+        position: absolute;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin-right: 1em;
+        background-color: $color-primary;
+        border-radius: 2em;
+        color: white;
+    }
+    &__icon {
+        font-size: 1.2em;
+        top: 1.15em;
+        padding: 0 1em 0 0;
+        left: 1.7em;
+        position: absolute;
+    }
+    &__text {
+        font-weight: bold;
+        position: absolute;
+        left: 4em;
+        top: 0.3em;
+    }
+}
+.fonctionnement {
+    display: flex;
+    @include desktop {
+        justify-content: center;
+    }
+    @include mobile {
+        align-items: center;
+        flex-direction: column;
+    }
+    @include tablette {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.section-fonctionnement {
+    padding-bottom: 3em;
+}
+.titre-accueil {
+    background-color: #f6f6f6;
+    padding-bottom: 2em;
+}
+.h1-accueil {
+    text-align: center;
+    padding: 1em 2em 0em 2em;
+    @include desktop {
+        font-size: 2em;
+    }
+    @include tablette {
+        font-size: 1.5em;
+    }
+    @include mobile {
+        font-size: 1.5em;
+    }
+}
+.p-titre {
+    text-align: center;
+    color: #353535;
+    padding: 0 0.5em 0 0.5em;
+}
+.h2-accueil {
+    @include desktop {
+        font-size: 2em;
+        text-align: center;
+    }
+    @include tablette {
+        text-align: center;
+    }
+    @include mobile {
+        margin-left: 16px;
+    }
+}
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    color: #353535;
+    padding: 1em 0 1em 0;
+    z-index: -1;
+    position: relative;
+    font-weight: bold;
+}
+.fa-map-marker-alt {
+    margin-right: 1em;
+}
+
+.section-restaurants {
+    background-color: #f6f6f6;
+}

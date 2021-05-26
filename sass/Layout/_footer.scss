@@ -1,0 +1,23 @@
+@mixin footer {
+    background-color: $footer-color;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0 1.5em 1em;   
+        &__img {
+            width: 6em;
+            filter: invert(100%);
+        }
+        &__container {
+            padding: 0.4em 0 0 0;        
+            &__a {
+                color: white;
+            }
+            .fa-hands-helping {
+                font-size: 70%;
+            }
+    }
+}
+
+.footer {
+@include footer;
+}
