@@ -27,26 +27,12 @@ a {
 }
 
 
-.localisation {
-    display: flex;
-    justify-content: center;
-    background-color: #eaeaea;
-    color: #353535;
-    padding: 1em 0 1em 0;
-    z-index: -1;
-    position: relative;
-    font-weight: bold;
-}
-.fa-map-marker-alt {
-    margin-right: 1em;
-}
+
 /* Rajouter à l'include ".btn-link__text::after { content: "";} */
 
 /* revoir la width pour l'adapter mobile/desktop si il faut et faire l'animation */
 
-.section-restaurants {
-    background-color: #f6f6f6;
-}
+
 .container-restaurants {
     @include desktop {
         display: flex;

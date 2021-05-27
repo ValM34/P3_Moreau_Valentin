@@ -31,18 +31,18 @@
     z-index: 10000;
 }
 .loading-spinner {
-    display: flex;
-    justify-content: center;
+    position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
     &-1 {
         border-left: 8px solid $color-primary;
         border-right: 8px solid $color-tertiary;
         border-radius: 30em;
         height: 10em;
         width: 10em;
-        position: absolute;
+        position: fixed;
         z-index: 1000;
         animation: spinner-1 3000ms cubic-bezier(0,0,1,1) forwards;
-        top: 19em;
     }
     &-2 {
         border-left: 6px solid $color-secondary;
@@ -50,10 +50,9 @@
         border-radius: 30em;
         height: 15em;
         width: 15em;
-        position: absolute;
+        position: fixed;
         z-index: 1000;
         animation: spinner-2 3000ms cubic-bezier(0,0,1,1) forwards;
-        top: 16.5em;
     }
     &-3 {
         border-right: 3px solid $color-tertiary;
@@ -61,34 +60,33 @@
         border-radius: 30em;
         height: 20em;
         width: 20em;
-        position: absolute;
+        position: fixed;
         z-index: 1000;
         animation: spinner-3 3000ms cubic-bezier(0,0,1,1) forwards;
-        top: 14em;
     }
 }
 
 @keyframes spinner-1 {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(720deg);
+        transform: translate(-50%, -50%) rotate(720deg);
     }
 }
 @keyframes spinner-2 {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(1200deg);
+        transform: translate(-50%, -50%) rotate(1200deg);
     }
 }
 @keyframes spinner-3 {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(1800deg);
+        transform: translate(-50%, -50%) rotate(1800deg);
     }
 }
