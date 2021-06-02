@@ -266,6 +266,14 @@
 .btn-menu__left__text {
   margin: 0;
   padding: 0.5em 0 1em 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+}
+
+.tests:hover .add:after {
+  content: "hhhhhhhhhhh";
 }
 
 .icon__animate {
