@@ -117,7 +117,7 @@
     border-radius: 1em;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
     box-shadow: $box-shadow;
     overflow: hidden;
     &:hover {
@@ -126,8 +126,8 @@
     &__animate {
         position: relative;
         transition: transform 400ms ease-in-out;
-        transform: translateX(4.3em);
-        width: 20%;
+        transform: translateX(13.3em);
+        width: 22%;
         background-color: $color-tertiary;
         display: flex;
         align-items: center;
@@ -149,8 +149,8 @@
         white-space: nowrap;
     }
 }
-.tests:hover .add:after{
-    content: "hhhhhhhhhhh"
+.btn-menu__left:hover {
+    width: 65%;
 }
 .icon__animate {
     width: 100%;
@@ -165,14 +165,14 @@
     }
 }
 .price__animate {
-    width: 300px;
+    width: 70%;
     &:hover .btn-menu__right {
         transform: translateX(0em);
     }
 }
 .btn-menu__right {
     transition: transform 400ms ease-in-out;
-    transform: translateX(3.5em);
+    transform: translateX(0.5em);
     display: flex;
     align-items: flex-end;
     padding-bottom: 1em;
