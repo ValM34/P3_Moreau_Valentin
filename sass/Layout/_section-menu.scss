@@ -139,19 +139,30 @@
     &__left__title {
         display: block;
         padding: 1em 0 0 1em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
     }
     &__left__text {
         margin: 0;
         padding: 0.5em 0 1em 1em;
         text-overflow: ellipsis;
         overflow: hidden;
-        width: 200px;
+        width: 100%;
         white-space: nowrap;
     }
+    &__ellipsis {
+        width: 240px;
+        margin-right: -40px;
+        transition: 400ms ease-in-out;
+    }
+    &:hover > &__ellipsis {
+        width: 180px;
+        margin-right: 20px;
+    }
 }
-.tests:hover .add:after{
-    content: "hhhhhhhhhhh"
-}
+
 .icon__animate {
     width: 100%;
     &:hover &__rotate {
