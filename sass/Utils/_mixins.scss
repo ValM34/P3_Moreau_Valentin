@@ -84,10 +84,10 @@
 }
 
 
-@mixin heart-animate1 {
+.heart1 {
     color: #7e7e7e;
 }
-@mixin heart-animate2 {
+.heart2 {
     transition: opacity 400ms ease-in-out;
     opacity: 0;
     color: transparent;
@@ -96,11 +96,4 @@
     &:hover {
         opacity: 1;
     }
-}
-
-.mixin-heart1 {
-    @include heart-animate1;
-}
-.mixin-heart2 {
-    @include heart-animate2;
 }

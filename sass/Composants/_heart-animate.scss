@@ -1,0 +1,13 @@
+.heart1 {
+    color: #7e7e7e;
+}
+.heart2 {
+    transition: opacity 400ms ease-in-out;
+    opacity: 0;
+    color: transparent;
+    background: linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    &:hover {
+        opacity: 1;
+    }
+}
