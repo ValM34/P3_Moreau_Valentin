@@ -27,6 +27,7 @@
     &__h1 {
         font-style: inherit;
         font-family: 'Shrikhand', 'Arial', 'sans-serif';
+        margin-top: 1.2em;
         @include desktop {
             font-size: 2em;
         }
@@ -99,12 +100,32 @@
     position: relative;
     top: 0.8em;
     font-size: 1.8em;
+    @include desktop {
+        top: 1.5em;
+    }
+    @include tablette {
+        top: 1.5em;
+    }
+    @include mobile {
+        top: 1em;
+        left: 1em;
+    }
 }
 .heart-menu2 {
     position: relative;
     top: 0.8em;
     left: -1.14em;
     font-size: 1.8em;
+    @include desktop {
+        top: 1.5em;
+    }
+    @include tablette {
+        top: 1.5em;
+    }
+    @include mobile {
+        top: 1em;
+        left: -0.14em;
+    }
 }
 
 .container-btn {
@@ -118,9 +139,11 @@
     display: flex;
     justify-content: space-between;
     width: 350px;
-    max-width: 93%;
     box-shadow: $box-shadow;
     overflow: hidden;
+    @include mobile {
+        max-width: 93%;
+    }
     &:hover {
         cursor: pointer;
     }
@@ -166,6 +189,9 @@
         width: 250px;
         margin-right: -60px;
         transition: 400ms ease-in-out;
+        @include mobile {
+            max-width: 80%;
+        }
     }
     &:hover > &__ellipsis {
         width: 205px;

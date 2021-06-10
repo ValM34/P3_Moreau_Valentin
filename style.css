@@ -166,7 +166,7 @@
   background-color: #353535;
   display: flex;
   flex-direction: column;
-  padding: 1.5em 0 1.5em 1em;
+  padding: 1.5em 0 1.5em 1.5em;
 }
 .footer__img {
   width: 6em;
@@ -217,6 +217,7 @@
 .menu-titre__h1 {
   font-style: inherit;
   font-family: "Shrikhand", "Arial", "sans-serif";
+  margin-top: 1.2em;
 }
 @media screen and (min-width: 1025px) {
   .menu-titre__h1 {
@@ -307,12 +308,44 @@
   top: 0.8em;
   font-size: 1.8em;
 }
+@media screen and (min-width: 1025px) {
+  .heart-menu1 {
+    top: 1.5em;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .heart-menu1 {
+    top: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heart-menu1 {
+    top: 1em;
+    left: 1em;
+  }
+}
 
 .heart-menu2 {
   position: relative;
   top: 0.8em;
   left: -1.14em;
   font-size: 1.8em;
+}
+@media screen and (min-width: 1025px) {
+  .heart-menu2 {
+    top: 1.5em;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .heart-menu2 {
+    top: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heart-menu2 {
+    top: 1em;
+    left: -0.14em;
+  }
 }
 
 .container-btn {
@@ -327,9 +360,13 @@
   display: flex;
   justify-content: space-between;
   width: 350px;
-  max-width: 93%;
   box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
   overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .btn-menu {
+    max-width: 93%;
+  }
 }
 .btn-menu:hover {
   cursor: pointer;
@@ -376,6 +413,11 @@
   width: 250px;
   margin-right: -60px;
   transition: 400ms ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .btn-menu__ellipsis {
+    max-width: 80%;
+  }
 }
 .btn-menu:hover > .btn-menu__ellipsis {
   width: 205px;
