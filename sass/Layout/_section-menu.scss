@@ -143,6 +143,8 @@
         overflow: hidden;
         width: 100%;
         white-space: nowrap;
+        font-size: 1em;
+        margin: 0;
     }
     &__left__text {
         margin: 0;
@@ -188,4 +190,5 @@
     align-items: flex-end;
     padding-bottom: 1em;
     font-weight: bold;
+    margin: 0;
 }

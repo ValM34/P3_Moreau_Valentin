@@ -266,6 +266,8 @@
   overflow: hidden;
   width: 100%;
   white-space: nowrap;
+  font-size: 1em;
+  margin: 0;
 }
 .btn-menu__left__text {
   margin: 0;
@@ -312,6 +314,7 @@
   align-items: flex-end;
   padding-bottom: 1em;
   font-weight: bold;
+  margin: 0;
 }
 
 @keyframes loading-spinner {
@@ -411,6 +414,11 @@
     transform: translate(-50%, -50%) rotate(1800deg);
   }
 }
+.fonctionnement__tuto__text__title {
+  color: black;
+  font-size: 1em;
+}
+
 .fonctionnement__tuto {
   display: flex;
   padding: 2.2em 1.4em 2.2em 2em;
@@ -476,7 +484,7 @@
   font-weight: bold;
   position: absolute;
   left: 4em;
-  top: 0.3em;
+  top: 0.6em;
 }
 
 .fonctionnement {
@@ -716,10 +724,13 @@ a {
   padding: 0.7em 0 0 0.5em;
   font-weight: bold;
   color: black;
+  font-size: 1em;
+  margin: 0;
 }
 .container-vignette__text__paragraphe {
   padding: 0.4em 0 0.5em 0.5em;
   color: black;
+  margin: 0;
 }
 .container-vignette__text__icon1 {
   position: relative;
