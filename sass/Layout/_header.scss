@@ -1,4 +1,4 @@
-@mixin header {
+.header {
     padding: 1.4em 0 0.4em 0;
     text-align: center;
     box-shadow: 0px 4px 10px -6px lighten($shadow, 10);
@@ -14,8 +14,4 @@
     &__logo-link__img {
         width: 10em;
     }
-}
-
-.header {
-@include header;
 }

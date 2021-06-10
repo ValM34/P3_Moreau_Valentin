@@ -117,11 +117,17 @@
     border-radius: 1em;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 300px;
     box-shadow: $box-shadow;
     overflow: hidden;
     &:hover {
         cursor: pointer;
+    }
+    &:hover .btn-menu__right {
+        transform: translateX(0em);
+    }
+    &:hover .icon__animate__rotate {
+        transform: rotate(360deg);
     }
     &__animate {
         position: relative;
@@ -165,24 +171,14 @@
     }
 }
 
-.icon__animate {
-    width: 100%;
-    &:hover &__rotate {
-        transform: rotate(360deg);
-    }
-    &__rotate {
-        transition: 400ms 100ms ease-in-out;
-        transform: rotate(0);
-        color: white;
-        font-size: 1.3em;
-    }
+
+.icon__animate__rotate {
+    transition: 400ms 100ms ease-in-out;
+    transform: rotate(0);
+    color: white;
+    font-size: 1.3em;
 }
-.price__animate {
-    width: 300px;
-    &:hover .btn-menu__right {
-        transform: translateX(0em);
-    }
-}
+
 .btn-menu__right {
     transition: transform 400ms ease-in-out;
     transform: translateX(3.5em);

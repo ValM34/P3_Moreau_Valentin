@@ -1,4 +1,4 @@
-@mixin footer {
+.footer {
     background-color: $footer-color;
     display: flex;
     flex-direction: column;
@@ -16,8 +16,4 @@
                 font-size: 70%;
             }
     }
-}
-
-.footer {
-@include footer;
 }

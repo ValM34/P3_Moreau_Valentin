@@ -81,9 +81,6 @@ a {
 .image-4 {
     background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
-.container-vignette {
-    @include vignette
-}
 .vignette-center {
     display: flex;
     justify-content: center;

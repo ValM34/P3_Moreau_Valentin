@@ -1,4 +1,76 @@
 @charset "UTF-8";
+.container-vignette {
+  border-radius: 1em;
+  justify-content: center;
+  box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
+  margin: 1em;
+  background-color: white;
+  width: 100%;
+}
+.container-vignette__background {
+  background-size: cover;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  background-position: center center;
+}
+@media screen and (max-width: 600px) {
+  .container-vignette__background {
+    width: 100%;
+    height: 10em;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .container-vignette__background {
+    width: 100%;
+    height: 10em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container-vignette__background {
+    width: 100%;
+    height: 15em;
+  }
+}
+.container-vignette__background__image {
+  display: none;
+}
+.container-vignette__text {
+  display: flex;
+  justify-content: space-between;
+}
+.container-vignette__text__title {
+  padding: 0.7em 0 0 0.5em;
+  font-weight: bold;
+  color: black;
+  font-size: 1em;
+  margin: 0;
+}
+.container-vignette__text__paragraphe {
+  padding: 0.4em 0 0.5em 0.5em;
+  color: black;
+  margin: 0;
+}
+.container-vignette__text__icon1 {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5em;
+  right: 0.5em;
+  top: 0.7em;
+}
+.container-vignette__text__icon2 {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: -28px;
+  right: 0;
+  font-size: 1.5em;
+  right: 0.5em;
+  top: 0.7em;
+}
+
 .mixin-heart1 {
   color: #7e7e7e;
 }
@@ -239,12 +311,18 @@
   border-radius: 1em;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 300px;
   box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
   overflow: hidden;
 }
 .btn-menu:hover {
   cursor: pointer;
+}
+.btn-menu:hover .btn-menu__right {
+  transform: translateX(0em);
+}
+.btn-menu:hover .icon__animate__rotate {
+  transform: rotate(360deg);
 }
 .btn-menu__animate {
   position: relative;
@@ -287,24 +365,11 @@
   margin-right: 20px;
 }
 
-.icon__animate {
-  width: 100%;
-}
-.icon__animate:hover .icon__animate__rotate {
-  transform: rotate(360deg);
-}
 .icon__animate__rotate {
   transition: 400ms 100ms ease-in-out;
   transform: rotate(0);
   color: white;
   font-size: 1.3em;
-}
-
-.price__animate {
-  width: 300px;
-}
-.price__animate:hover .btn-menu__right {
-  transform: translateX(0em);
 }
 
 .btn-menu__right {
@@ -679,78 +744,6 @@ a {
 
 .image-4 {
   background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-}
-
-.container-vignette {
-  border-radius: 1em;
-  justify-content: center;
-  box-shadow: 0px 7px 10px -6px rgba(63, 63, 63, 0.64);
-  margin: 1em;
-  background-color: white;
-  width: 100%;
-}
-.container-vignette__background {
-  background-size: cover;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  background-position: center center;
-}
-@media screen and (max-width: 600px) {
-  .container-vignette__background {
-    width: 100%;
-    height: 10em;
-  }
-}
-@media screen and (max-width: 1024px) and (min-width: 601px) {
-  .container-vignette__background {
-    width: 100%;
-    height: 10em;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .container-vignette__background {
-    width: 100%;
-    height: 15em;
-  }
-}
-.container-vignette__background__image {
-  display: none;
-}
-.container-vignette__text {
-  display: flex;
-  justify-content: space-between;
-}
-.container-vignette__text__title {
-  padding: 0.7em 0 0 0.5em;
-  font-weight: bold;
-  color: black;
-  font-size: 1em;
-  margin: 0;
-}
-.container-vignette__text__paragraphe {
-  padding: 0.4em 0 0.5em 0.5em;
-  color: black;
-  margin: 0;
-}
-.container-vignette__text__icon1 {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 1.5em;
-  right: 0.5em;
-  top: 0.7em;
-}
-.container-vignette__text__icon2 {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: -28px;
-  right: 0;
-  font-size: 1.5em;
-  right: 0.5em;
-  top: 0.7em;
 }
 
 .vignette-center {
