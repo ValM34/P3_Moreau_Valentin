@@ -125,6 +125,11 @@
   box-shadow: 0 7px 17px -6px rgba(63, 63, 63, 0.64);
 }
 
+#commander {
+  padding: 0.94em 2em 0.94em 2em;
+  margin: -0.5em 0 3.5em 0;
+}
+
 #commander::after {
   content: "Commander";
 }
@@ -166,11 +171,12 @@
   background-color: #353535;
   display: flex;
   flex-direction: column;
-  padding: 1.5em 0 1.5em 1.5em;
+  padding: 1.5em 0 2em 1.5em;
 }
 .footer__img {
   width: 6em;
   filter: invert(100%);
+  margin-bottom: 0.5em;
 }
 .footer__container {
   padding: 0.4em 0 0 0;
@@ -209,7 +215,7 @@
 .menu-titre {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
-  margin-top: -2em;
+  margin-top: -4em;
   background-color: #f6f6f6;
   display: flex;
   justify-content: space-around;
@@ -472,17 +478,14 @@
   width: 100%;
   animation: loading-spinner-background 2700ms forwards;
   background-color: white;
-  z-index: 10000;
+  z-index: 1;
 }
 
 .loading-spinner {
   position: absolute;
-  /* postulat de départ */
   top: 50%;
   left: 50%;
-  /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%);
-  /* décalage de 50% de sa propre taille */
 }
 .loading-spinner-1 {
   border-left: 8px solid #9356DC;
@@ -491,7 +494,6 @@
   height: 10em;
   width: 10em;
   position: fixed;
-  z-index: 1000;
   animation: spinner-1 3000ms cubic-bezier(0, 0, 1, 1) forwards;
 }
 .loading-spinner-2 {
@@ -501,7 +503,6 @@
   height: 15em;
   width: 15em;
   position: fixed;
-  z-index: 1000;
   animation: spinner-2 3000ms cubic-bezier(0, 0, 1, 1) forwards;
 }
 .loading-spinner-3 {
@@ -511,7 +512,6 @@
   height: 20em;
   width: 20em;
   position: fixed;
-  z-index: 1000;
   animation: spinner-3 3000ms cubic-bezier(0, 0, 1, 1) forwards;
 }
 
@@ -572,7 +572,7 @@
 }
 .fonctionnement__tuto::before {
   transition: opacity 400ms ease-in-out;
-  background-color: #e4d5f6;
+  background-color: #f2eafb;
   opacity: 0;
   content: "";
   position: absolute;
@@ -682,6 +682,7 @@
 @media screen and (max-width: 600px) {
   .h2-accueil {
     margin-left: 16px;
+    margin-top: 2em;
   }
 }
 
@@ -702,6 +703,7 @@
 
 .section-restaurants {
   background-color: #f6f6f6;
+  padding-bottom: 3em;
 }
 
 .container-vignette {
@@ -716,18 +718,18 @@
   background-size: cover;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
-  background-position: center center;
+  background-position: 50% 60%;
 }
 @media screen and (max-width: 600px) {
   .container-vignette__background {
     width: 100%;
-    height: 10em;
+    height: 11em;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 601px) {
   .container-vignette__background {
     width: 100%;
-    height: 10em;
+    height: 11em;
   }
 }
 @media screen and (min-width: 1025px) {

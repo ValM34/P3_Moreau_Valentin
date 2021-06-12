@@ -28,12 +28,12 @@
     width: 100%;
     animation: loading-spinner-background 2700ms forwards;
     background-color: white;
-    z-index: 10000;
+    z-index: 1;
 }
 .loading-spinner {
-    position: absolute; /* postulat de départ */
-  top: 50%; left: 50%; /* à 50%/50% du parent référent */
-  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
     &-1 {
         border-left: 8px solid $color-primary;
         border-right: 8px solid $color-tertiary;
@@ -41,7 +41,6 @@
         height: 10em;
         width: 10em;
         position: fixed;
-        z-index: 1000;
         animation: spinner-1 3000ms cubic-bezier(0,0,1,1) forwards;
     }
     &-2 {
@@ -51,7 +50,6 @@
         height: 15em;
         width: 15em;
         position: fixed;
-        z-index: 1000;
         animation: spinner-2 3000ms cubic-bezier(0,0,1,1) forwards;
     }
     &-3 {
@@ -61,7 +59,6 @@
         height: 20em;
         width: 20em;
         position: fixed;
-        z-index: 1000;
         animation: spinner-3 3000ms cubic-bezier(0,0,1,1) forwards;
     }
 }
