@@ -11,3 +11,35 @@
         opacity: 1;
     }
 }
+
+.heart-menu1 {
+    position: relative;
+    top: 0.8em;
+    font-size: 1.8em;
+    @include desktop {
+        top: 1.5em;
+    }
+    @include tablette {
+        top: 1.5em;
+    }
+    @include mobile {
+        top: 1em;
+        left: 1em;
+    }
+}
+.heart-menu2 {
+    position: relative;
+    top: 0.8em;
+    left: -1.14em;
+    font-size: 1.8em;
+    @include desktop {
+        top: 1.5em;
+    }
+    @include tablette {
+        top: 1.5em;
+    }
+    @include mobile {
+        top: 1em;
+        left: -0.14em;
+    }
+}

@@ -38,18 +38,18 @@
 }
 .container-menu {
     margin-bottom: 3em;
-    animation: entrees 800ms ease-in-out both;
+    animation: menu-progressif 800ms ease-in-out both;
 }
 
 .container-menu-2 {
     margin-bottom: 3em;
-    animation: entrees 800ms 800ms ease-in-out both;
+    animation: menu-progressif 800ms 800ms ease-in-out both;
 }
 .container-menu-3 {
     margin-bottom: 3em;
-    animation: entrees 800ms 1600ms ease-in-out both;
+    animation: menu-progressif 800ms 1600ms ease-in-out both;
 }
-@keyframes entrees {
+@keyframes menu-progressif {
     0% {
         opacity: 0;
         transform: translateY(5em);
@@ -96,37 +96,7 @@
     }
 }
 
-.heart-menu1 {
-    position: relative;
-    top: 0.8em;
-    font-size: 1.8em;
-    @include desktop {
-        top: 1.5em;
-    }
-    @include tablette {
-        top: 1.5em;
-    }
-    @include mobile {
-        top: 1em;
-        left: 1em;
-    }
-}
-.heart-menu2 {
-    position: relative;
-    top: 0.8em;
-    left: -1.14em;
-    font-size: 1.8em;
-    @include desktop {
-        top: 1.5em;
-    }
-    @include tablette {
-        top: 1.5em;
-    }
-    @include mobile {
-        top: 1em;
-        left: -0.14em;
-    }
-}
+
 
 .container-btn {
     display: flex;
